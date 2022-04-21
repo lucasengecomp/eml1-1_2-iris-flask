@@ -20,3 +20,7 @@
     $ pip install -r requirements.txt
 
     $ python app.py
+
+
+## Imagem disponível no DockerHUB
+https://hub.docker.com/repository/docker/lucasengecomp/eml1-2-do-notebook-para-prod
