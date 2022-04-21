@@ -1,13 +1,13 @@
-# import pandas as pd # To manage data as data frames
 import numpy as np # To manipulate data as arrays
+from sklearn import datasets
 from sklearn.linear_model import LogisticRegression # Classification model
-from pycaret.datasets import get_data
+
+# import some data to play with
+iris = datasets.load_iris()
 
 
-dataset = get_data('iris', profile=True)
-
-X = dataset.iloc[:, 0:-1] # Extracting the features/independent variables
-y = dataset.iloc[:, -1] # Extracting the target/dependent variable
+X = iris.iloc[:, 0:-1] # Extracting the features/independent variables
+y = iris.iloc[:, -1] # Extracting the target/dependent variable
 
 logreg = LogisticRegression(max_iter=1000) # Initializing the Logistic Regression model
 logreg.fit(X, y) # Fitting the model
